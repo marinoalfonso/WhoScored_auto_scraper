@@ -1,0 +1,36 @@
+# ── Output dataset (regenerate locally with the pipeline) ─────────────────────
+*.parquet
+*.duckdb
+
+# ── Raw HTML files (temporary, deleted after processing) ──────────────────────
+partite/
+# Keep the folder structure but ignore all HTML content
+!partite/.gitkeep
+!partite/_inbox/.gitkeep
+
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+*.egg-info/
+dist/
+build/
+
+# ── Virtual environment ───────────────────────────────────────────────────────
+venv/
+.venv/
+env/
+.env/
+
+# ── OS ────────────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── IDEs ──────────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+
+# ── Logs ─────────────────────────────────────────────────────────────────────
+*.log
