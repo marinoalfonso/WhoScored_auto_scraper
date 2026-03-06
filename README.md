@@ -34,7 +34,7 @@ The two scripts share the same **matchId deduplication logic**: if a match is al
 ## Repository Structure
 
 ```
-whoscored/
+whoscored_auto_scraper/
 │
 ├── script/
 │   ├── whoscored_downloader.py    # Playwright scraper — downloads HTML from WhoScored
@@ -79,7 +79,7 @@ Each row in `eventi_serie_a.parquet` represents a single on-ball event.
 ## Installation
 
 ```bash
-git clone https://github.com/marinoalfonso/whoscored-serie-a.git
+git clone https://github.com/marinoalfonso/Whoscored_auto_scraper.git
 cd whoscored-serie-a
 
 python -m venv venv
