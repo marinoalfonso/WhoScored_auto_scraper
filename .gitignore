@@ -34,3 +34,6 @@ desktop.ini
 
 # ── Logs ─────────────────────────────────────────────────────────────────────
 *.log
+
+# Variabili d'ambiente — credenziali locali
+.env
