@@ -21,6 +21,7 @@ import re
 import json
 import time
 from pathlib import Path
+import os
 
 from playwright.sync_api import sync_playwright, Page
 
@@ -237,7 +238,8 @@ def run() -> None:
     print(f"📋 Match già nel Parquet: {len(processed_ids)}")
 
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=False)
+        headless = os.getenv("PLAYWRIGHT_HEADLESS", "false").lower() == "true"
+        browser = p.chromium.launch(headless=headless)
         context = browser.new_context(
             user_agent=(
                 "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "

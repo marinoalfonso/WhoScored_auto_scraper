@@ -39,6 +39,7 @@ services:
       DB_USER: ${DB_USER}
       DB_PASSWORD: ${DB_PASSWORD}
       DB_NAME: ${DB_NAME}
+      PLAYWRIGHT_HEADLESS: "true"
     depends_on:
       db:
         condition: service_healthy
