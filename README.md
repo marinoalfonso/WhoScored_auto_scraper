@@ -103,7 +103,7 @@ SELECT player_name, minuto
 FROM eventi
 WHERE event_type = 'Pass'
   AND team_name = 'Juventus'
-  AND qualifiers->>'Accurate' = 'true'
+  AND outcome = 'Successful'
   AND qualifiers->>'PassLength' = 'Short';
 ```
 
@@ -164,7 +164,7 @@ This will:
 ### Full automated run (download + parse)
 
 ```bash
-docker-compose run scraper python script/whoscored_downloader.py
+docker-compose run --rm scraper python script/whoscored_downloader.py
 ```
 
 Or if running locally outside Docker:
