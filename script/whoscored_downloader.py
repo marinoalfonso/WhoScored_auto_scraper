@@ -27,7 +27,7 @@ from playwright.sync_api import sync_playwright, Page
 # Local import — script_eventi must be on the Python path or in the same package
 import sys
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from script_eventi import load_processed_ids, OUTPUT_PARQUET, process_and_save
+from script_eventi_pg import load_processed_ids, process_and_save
 
 # ── Paths ─────────────────────────────────────────────────────────────────────
 BASE_DIR       = Path(__file__).resolve().parent.parent
@@ -233,7 +233,7 @@ def save_html_to_inbox(html: str, match_id: str, page_title: str) -> int:
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def run() -> None:
-    processed_ids = load_processed_ids(OUTPUT_PARQUET)
+    processed_ids = load_processed_ids()
     print(f"📋 Match già nel Parquet: {len(processed_ids)}")
 
     with sync_playwright() as p:
